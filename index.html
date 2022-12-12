@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <style>
+        body{
+            background-color: #b09e99;;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .centerbox{
+            text-align: center;
+            margin: auto;
+            width: 500px;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 50%;
+        }
+
+        button{
+            width: 50%;
+            margin: 1rem ;
+            padding: 1rem;
+            background-color: rgb(123, 189, 123);
+            font-weight: 800;font-size: 1rem;
+            cursor: pointer;
+
+        }
+        button:hover{
+            background-color: rgb(80, 198, 80);
+        }
+
+        .change{
+            color: rgb(125, 125, 125);
+            font-size: 20px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centerbox">
+            <button>GENERATE QUOTE</button>
+            <div class="down">
+                <p class="change">
+                    “Act first, explain later.”
+                    ― Dan Brown, Digital Fortress
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let quote1 = `“That proves you are unusual," returned the Scarecrow; "and I am convinced that the only people worthy of consideration in this world are the unusual ones. For the common folks are like the leaves of a tree, and live and die unnoticed.”`
+        let quote2 = `“But that was life: Nobody got a guided tour to their own theme park. You had to hop on the rides as they presented themselves, never knowing whether you would like the one you were in line for...or if the bastard was going to make you throw up your corn dog and your cotton candy all over the place.”
+        ― J.R. Ward, Crave `
+        let quote3 = `Her name badge read: Hello! My name is DIE, DEMIGOD SCUM!”
+― Rick Riordan, The Son of Neptune`
+        let quote4 = `“Insane means fewer cameras!”
+― Ally Carter, Only the Good Spy Young`
+        let quote5 = `“I'm about as intimidating as a butterfly.”
+― Dan Howell`
+        let quote6 = `“Act first, explain later.”
+― Dan Brown, Digital Fortress`
+        let quote7 = `“My melon soul
+Crushed by your Gallagher of apathy”
+― David Wong, John Dies at the End`
+        let quote8 = ``
+const Quotes = [quote1,quote2,quote3,quote4,quote5,quote6,quote7,quote8];
+
+
+        const button = document.querySelector('button');
+        button.addEventListener('click',randomQuotes);
+const change = document.querySelector('.change');
+        function randomQuotes() {
+            for (let i = 0; i < Quotes.length; i++) {
+                let element = Math.floor(Math.random()*Quotes.length);
+                change.innerHTML=Quotes[element];
+                
+            }
+            if(change.innerHTML == ""){
+                change.innerHTML=`All Power is with in you,   you can do    Anything and Everything -----SWAMI VIVEKANAND `;
+
+
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
+
